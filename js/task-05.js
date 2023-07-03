@@ -1,10 +1,13 @@
-const inputText = document.querySelector('#name-input');
-const greetName = document.querySelector('#name-output');
-inputText.addEventListener('input', Greeting);
+
+
+const textInput = document.querySelector("#name-input");
+const textOutput = document.querySelector("#name-output");
+textInput.addEventListener("input", Greeting);
 function Greeting() {
-    if (inputText.value) {
-        greetName.textContent = inputText.value;
+    if (textInput.value === "") {
+        textOutput.textContent = 'Anonymous';
     } else {
-        return greetName;
+        textOutput.textContent = textInput.value;
     }
-}
+};
+
