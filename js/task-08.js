@@ -5,7 +5,8 @@ function OnSubmit(evt) {
     evt.preventDefault();
     const { email, password } = evt.currentTarget.elements;
     if (!email.value || !password.value) {
-        alert('All fields must be filled!')
+        alert('All fields must be filled!');
+        return;
     } else {
         const data = {
         email: email.value,
